@@ -1,0 +1,14 @@
+@use "../abstracts/variables" as var;
+@use "../abstracts/mixins" as mix;
+
+// Logo
+header{
+    background-color: var.$couleur-secondaire;
+   
+    .header-logo{
+        width: 30%;
+        img{
+            width: 30%;
+        }
+    }
+}
