@@ -2,8 +2,9 @@
 @use "../abstracts/mixins" as mix;
 
 // Logo
+
 header{
-    background-color: var.$couleur-secondaire;
+    background-color: var.$couleur-nav;
    
     .header-logo{
         width: 30%;

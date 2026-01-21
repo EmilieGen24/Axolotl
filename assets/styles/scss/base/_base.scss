@@ -1,0 +1,23 @@
+@use "../abstracts/variables" as var;
+
+body {
+    font-family: var.$police-principale;
+    margin: 0;
+}
+
+h1{
+    font-size: 2rem;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    font-family: var.$police-secondaire;
+    text-transform: uppercase;
+    color: var.$couleur-secondaire;
+    text-align: center;
+    letter-spacing: 1.5px;
+}
+
+h2{
+    font-family: var.$police-principale;
+    font-size: 2rem;
+    text-transform: uppercase;
+}

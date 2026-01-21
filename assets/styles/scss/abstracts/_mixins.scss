@@ -1,0 +1,8 @@
+@use "../abstracts/variables" as var;
+
+@mixin button{
+    padding: 10px 20px;
+    background-color: var.$couleur-btn;
+    color: white;
+    border-radius: 5px;
+}
