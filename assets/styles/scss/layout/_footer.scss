@@ -1,2 +1,38 @@
 @use "../abstracts/variables" as var;
 @use "../abstracts/mixins" as mix;
+
+// FOOTER
+
+footer{
+    background-color: var.$couleur-nav;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-top: 3px solid var.$couleur-btn;
+
+    .footer-logo{
+        width: 40%;
+        margin: 0 auto;
+        img{
+            width: 50%;
+            display: block;
+            margin: 0 auto;
+        }
+    }
+    .footer-content{
+    text-align: center;
+        a{
+            color: var.$couleur-btn;
+            transition: all 0.3s ease;
+            display: block;
+            text-decoration: none;
+        }
+        a:hover{
+            text-decoration: underline;
+            color: var.$couleur-btn;
+                }
+    }
+    .copy{
+        margin-top: 50px;
+        font-size: 0.9rem;
+    }
+}

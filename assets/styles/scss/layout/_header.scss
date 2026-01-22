@@ -5,11 +5,48 @@
 
 header{
     background-color: var.$couleur-nav;
-   
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 3px solid var.$couleur-btn;
+
+    // .menu-burger{
+        //     display: none;
+        // }
+
     .header-logo{
-        width: 30%;
+        width: 40%;
         img{
-            width: 30%;
+            width: 40%;
         }
     }
+    nav{
+        display: flex;
+        justify-content: space-between;
+        align-items: center; 
+
+        ul{
+            display: flex;
+            gap: 50px;
+            
+            li{
+                list-style: none;
+
+                a{
+                    color: var.$couleur-principale;
+                    transition: all 0.3s ease;
+                    display: block;
+                    text-decoration: none;
+                    font-weight: 600;
+                    font-size: 2rem;
+                }
+                a:hover{
+                    text-decoration: underline;
+                    color: var.$couleur-btn;
+                }
+            }
+        }
+    }
+    
 }
+
+    

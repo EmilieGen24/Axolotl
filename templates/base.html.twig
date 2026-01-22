@@ -10,15 +10,15 @@
 
     </head>
     <body>
-    <header>
+        <header>
             <nav class="container">
-                <div class="logo">
-                    <img src="{{ asset('assets/img/Logo.png')}}" alt="Image du logo">
+                <div class="header-logo">
+                    <img src="{{ asset('../assets/img/Logo.png')}}" alt="Image du logo">
                 </div>
                 <ul>
                     <li><a href="{{ path("accueil") }}">Accueil</a></li>
                     {# {% if is_granted('ROLE_USER')%} #}
-                    <li><a href="{{ path("galerie") }}">Galerie des Xolos</a></li>
+                    <li><a href="{{ path("galerie") }}">Galerie</a></li>
                     {# {% endif %} #}
                     {# <li><a href="{{ path("app_login") }}">Se connecter</a></li>
                      {# {% if is_granted('ROLE_USER')%} #}
@@ -33,13 +33,13 @@
         <footer>
             <section class="container">
                 <div class="footer-logo">
-                    <img src="{{ asset('assets/img/Logo.png')}}" alt="Image du logo">
+                    <img src="{{ asset('../assets/img/Logo.png')}}" alt="Image du logo">
                 </div>
                 <div class="footer-content">
-                    <p>contact@xochimilco-axolotl.fr</p>
-                    <p>01 23 45 67 89</p>
+                    <p>Nous sommes ici pour répondre à vos questions.</p>
+                    <a href="{{ path("contact") }}">Formulaire de contact</a>
                     <div class="copy">
-                        <p>copyright 2026 Xochimilco Axolotl. Tous droits réservés.</p>
+                        <p>Copyright 2026 Xochimilco Axolotl. Tous droits réservés.</p>
                     </div>
                 </div>
             </section>
