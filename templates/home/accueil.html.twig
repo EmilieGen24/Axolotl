@@ -35,40 +35,19 @@
             <p>Découvrez notre galerie de photos inspirantes où vous pourrez partager vos merveilleux petits "Xolos" qu'ils soient dorés, tachetés, blancs, ou albinos.</p>
             <p>Un espace pour échanger conseils, photos, expériences et poser ses questions.</p>
         </div>
+        {% for article in articles %}
         <div class="card">
             <div class="card-content">
                 <div class="card-img">
                     <img src="{{ asset('../assets/img/axocard1.jpg')}}" alt="Image Axolotl">
                 </div>
-                <h3>Patrick</h3>
-                <p>Leucistique blanc</p>
-                <p>Je vous présente Patrick mon Axolotl de 2 ans...</p>
-            </div>
-            <div class="card-content">
-                <div class="card-img">
-                    <img src="{{ asset('../assets/img/axolotl-fauve.jpg')}}"  alt="Image Axolotl">
-                </div>
-                <h3>Anton</h3>
-                <p>Fauve</p>
-                <p>Axolotl de 5 ans avec une couleur sauvage élevé encaptivité...</p>
-            </div>
-            <div class="card-content">
-                <div class="card-img">
-                    <img src="{{ asset('../assets/img/axocard3.jpg')}}" alt="Image Axolotl">
-                </div>
-                <h3>Derdre</h3>
-                <p>Arlequin</p>
-                <p>Mon tout premier Axolotl de 1 ans un peu timide et qui adore se cacher...</p>
-            </div>
-            <div class="card-content">
-                <div class="card-img">
-                    <img src="{{ asset('../assets/img/axocard4.jpg')}}" alt="Image Axolotl">
-                </div>
-                <h3>Kevin</h3>
-                <p>Leucistique blanc</p>
-                <p>Et voici Kevin, ça fait 4 ans que je l'ai avec moi...</p>
-            </div>
+                <h3>{{article.titre}}</h3>
+                <h4>{{article.nom}}</h4>
+                <p>{{article.couleur}}</p>
+                <p>{{article.description}}</p>
+            </div>               
         </div>
+        {% endfor %}
     </div>
 </section>
 
