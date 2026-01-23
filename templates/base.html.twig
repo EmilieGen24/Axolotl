@@ -10,21 +10,18 @@
 
     </head>
     <body>
-        <header>
+    <header>
             <nav class="container">
                 <div class="header-logo">
                     <img src="{{ asset('../assets/img/Logo.png')}}" alt="Image du logo">
                 </div>
                 <ul>
                     <li><a href="{{ path("accueil") }}">Accueil</a></li>
-                    {# {% if is_granted('ROLE_USER')%} #}
                     <li><a href="{{ path("galerie") }}">Galerie</a></li>
-                    {# {% endif %} #}
-                    {# <li><a href="{{ path("app_login") }}">Se connecter</a></li>
-                     {# {% if is_granted('ROLE_USER')%} #}
-                    {# <li><a href="{{ path("app_logout") }}">Se déconnecter</a></li> #}
-                     {# {% endif %} #}
-                    {# <li><a href="{{ path("inscription") }}">S'inscrire</a></li> #}
+                    <li><a href="{{ path("app_login") }}">Se connecter</a></li>
+                    {% if is_granted('ROLE_USER')%}
+                    <li><a href="{{ path("app_logout") }}">Se déconnecter</a></li>
+                    {% endif %}
                     <li><a href="{{ path("contact") }}">Contact</a></li>
                 </ul>
             </nav>

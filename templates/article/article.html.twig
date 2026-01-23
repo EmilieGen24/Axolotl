@@ -1,21 +1,9 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Galerie{% endblock %}
+{% block title %}Article{% endblock %}
 
 {% block body %}
-<section class="container">
-    <div class="galerie">
-        <div class="galerie-text">
-            <h2>Notre Galerie</h2>
-            <p>Découvrez notre galerie de photos inspirantes où vous pourrez partager vos merveilleux petits "Xolos" qu'ils soient dorés, tachetés, blancs, ou albinos.</p>
-            <p>Un espace pour échanger conseils, photos, expériences et poser ses questions.</p>
-        </div>
-        {% for message in app.flashes('success')%}  
-        <div class="alert alert-success"> 
-            {{ message }}
-        </div>
-        {% endfor %}
-        {% for article in articles %}
+{% for article in articles %}
         <div class="galerie-card">
             <div class="galerie-content">
                 <div class="card-img">
@@ -42,7 +30,5 @@
             {# {% endif %} #}
         </div>
         {% endfor %}
-    </div>
-</section>
 
 {% endblock %}

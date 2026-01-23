@@ -1,0 +1,10 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello AddArticleController!{% endblock %}
+
+{% block body %}
+    {{form_start(articleform)}}
+        {{form_widget(articleform)}}
+            <button>Ajouter l'article</button>
+    {{form_end(articleform)}}
+{% endblock %}

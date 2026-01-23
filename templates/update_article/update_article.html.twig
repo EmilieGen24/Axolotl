@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Modifie ton Article{% endblock %}
+
+{% block body %}
+    {{form_start(articleform)}}
+        {{form_widget(articleform)}}
+        <button>Modifier</button>
+    {{form_end(articleform)}}
+
+{% endblock %}

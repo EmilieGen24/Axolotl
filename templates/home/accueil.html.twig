@@ -20,7 +20,8 @@
             <p>Dans l’univers Xochilmico dédiée aux amoureux et fans des axolotls, nos axolotls sont appelés “Xolos” qui signifie “monstres”.</p> 
             <p>C'est un lieu d'entraide bienveillant où chacun peut progresser à son rythme, qu’il soit curieux, novice ou expérimenté. Des sujets variés y sont abordés : reproduction, soins, aménagement, génétique, ou encore adoption...</p>
             <p>Venez partager votre passion et votre amour des axolotls avec nous et inscrivez vous.</p>
-            <a href=""></a>
+            <button><a href="{{ path("app_login") }}">Se connecter</a></button>
+            <button><a href="{{ path("inscription") }}">S'inscrire</a></button>
         </div>
         <div class="connexion-img">
             <img src="{{ asset('../assets/img/axo1.png')}}" alt="Image Axolotl">
@@ -39,12 +40,12 @@
         <div class="card">
             <div class="card-content">
                 <div class="card-img">
-                    <img src="{{ asset('../assets/img/axocard1.jpg')}}" alt="Image Axolotl">
+                    <img src="{{ asset('/uploads/images/' ~ article.imageName)}}" alt="Image Axolotl">
                 </div>
                 <h3>{{article.titre}}</h3>
                 <h4>{{article.nom}}</h4>
                 <p>{{article.couleur}}</p>
-                <p>{{article.description}}</p>
+                <button><a href={{ path("article", {'id' : article.id})}}>Voir plus</a></button>
             </div>               
         </div>
         {% endfor %}

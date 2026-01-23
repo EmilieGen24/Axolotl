@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Inscription{% endblock %}
+
+{% block body %}
+
+    {{form_start(userform)}}
+        {{form_widget(userform)}}
+        <button>S'inscrire</button>
+    {{form_end(userform)}}
+{% endblock %}
