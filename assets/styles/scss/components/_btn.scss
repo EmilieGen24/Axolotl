@@ -1,11 +1,74 @@
 @use "../abstracts/variables" as var;
 @use "../abstracts/mixins" as mix;
 
-// .btn-send{
-//         @include mix.button;
-    
-//     :hover{
-//         box-shadow: 3px 3px 3px 5px (rgb(200, 185, 100));
-//         transition: all 0.3s ease;
-//     }
-// }
+.btn-plus{
+    @include mix.button;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.btn-plus:hover{  
+    background-color: var.$couleur-card;
+}
+
+.btn-inscription{
+    @include mix.button;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.btn-inscription:hover{  
+    background-color: var.$couleur-card;
+}
+
+.btn-modif{
+    @include mix.button;
+    display: block;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.btn-sup{
+    padding: 20px 20px;
+    background-color: var.$couleur-card;
+    color: white;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    border: 1px solid var.$couleur-card;
+    display: block;
+    font-size: 1.5rem;
+}
+
+.btn-add{
+    @include mix.button;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+.btn-add:hover{  
+    background-color: var.$couleur-card;
+}
+
+.btn-primary{
+    padding: 10px 20px;
+    background-color: var.$couleur-card;
+    color: white;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    border: 1px solid var.$couleur-card;
+    display: block;
+    font-size: 1.5rem;
+}
+
+.btn-logout{
+    padding: 10px 20px;
+    background-color: var.$couleur-card;
+    color: white;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    border: 1px solid var.$couleur-card;
+    display: block;
+    font-size: 1.5rem;
+}

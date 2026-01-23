@@ -26,19 +26,21 @@
                 <p>{{article.couleur}}</p>
                 <p>{{article.description}}</p>
                 {# {% if is_granted('ROLE_USER')%} #}
-                <a href={{ path("update_article", {'id' : article.id})}}>Modifier</a>
-                <form action="{{ path("delete", {'id' : article.id}) }}" method="POST" onsubmit="return confirm ('Confirmer la suppression?')">
-                    <input type="hidden" name="_method" value="delete">
-                    <input type="hidden" name="_token" value="{{csrf_token('SUP' ~ article.id)}}">
-                    <input id="delete" type="submit" value="Supprimer">
-                </form>
+                <div class="btn-article">
+                    <a class="btn-modif" href={{ path("update_article", {'id' : article.id})}}>Modifier</a>
+                    <form action="{{ path("delete", {'id' : article.id}) }}" method="POST" onsubmit="return confirm ('Confirmer la suppression?')">
+                        <input type="hidden" name="_method" value="delete">
+                        <input type="hidden" name="_token" value="{{csrf_token('SUP' ~ article.id)}}">
+                        <input class="btn-sup" id="delete" type="submit" value="Supprimer">
+                    </form>
+                </div>
                 {# {% endif %} #}
             </div>   
                          
         </div>
         <div>
             {# {% if is_granted('ROLE_USER')%} #}
-                <a href={{ path("add_article")}}>Ajouter un article</a>
+                <a class="btn-add" href={{ path("add_article")}}>Ajouter un article</a>
             {# {% endif %} #}
         </div>
         {% endfor %}

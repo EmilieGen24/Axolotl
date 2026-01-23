@@ -20,14 +20,19 @@
             <p>Dans l’univers Xochilmico dédiée aux amoureux et fans des axolotls, nos axolotls sont appelés “Xolos” qui signifie “monstres”.</p> 
             <p>C'est un lieu d'entraide bienveillant où chacun peut progresser à son rythme, qu’il soit curieux, novice ou expérimenté. Des sujets variés y sont abordés : reproduction, soins, aménagement, génétique, ou encore adoption...</p>
             <p>Venez partager votre passion et votre amour des axolotls avec nous et inscrivez vous.</p>
-            <button><a href="{{ path("app_login") }}">Se connecter</a></button>
-            <button><a href="{{ path("inscription") }}">S'inscrire</a></button>
+            <a class="btn-inscription" href="{{ path("inscription") }}">S'inscrire</a>
         </div>
         <div class="connexion-img">
             <img src="{{ asset('../assets/img/axo1.png')}}" alt="Image Axolotl">
         </div>
     </div>
-
+</section>
+<section>
+    {% for message in app.flashes('success')%}  
+        <div class="alert alert-success"> 
+            {{ message }}
+        </div>
+    {% endfor %}
 </section>
 <section class="container">
     <div class="galerie-accueil">
@@ -43,9 +48,9 @@
                     <img src="{{ asset('/uploads/images/' ~ article.imageName)}}" alt="Image Axolotl">
                 </div>
                 <h3>{{article.titre}}</h3>
-                <h4>{{article.nom}}</h4>
-                <p>{{article.couleur}}</p>
-                <button><a href={{ path("article", {'id' : article.id})}}>Voir plus</a></button>
+                <h4>Nom : {{article.nom}}</h4>
+                <p>Couleur : {{article.couleur}}</p>
+                <a class="btn-plus" href={{ path("article", {'id' : article.id})}}>Voir plus</a>
             </div>               
         </div>
         {% endfor %}
