@@ -1,10 +1,13 @@
 @use "../abstracts/variables" as var;
 @use "../abstracts/mixins" as mix;
 
+// PAGE ACCUEIL
 .btn-plus{
     @include mix.button;
     transition: all 0.3s ease;
     text-decoration: none;
+    display: block;
+    text-align: center;
 }
 
 .btn-plus:hover{  
@@ -15,15 +18,18 @@
     @include mix.button;
     transition: all 0.3s ease;
     text-decoration: none;
+    display: inline-block;
+    margin-bottom: 40px;
 }
 
 .btn-inscription:hover{  
     background-color: var.$couleur-card;
 }
 
+// PAGE GALERIE
 .btn-modif{
     @include mix.button;
-    display: block;
+    display: inline-block;
     transition: all 0.3s ease;
     text-decoration: none;
 }
@@ -36,7 +42,7 @@
     transition: all 0.3s ease;
     text-decoration: none;
     border: 1px solid var.$couleur-card;
-    display: block;
+    display: inline-block;
     font-size: 1.5rem;
 }
 
@@ -44,11 +50,14 @@
     @include mix.button;
     transition: all 0.3s ease;
     text-decoration: none;
+    display: inline-block;
+    margin-left: 20px;
 }
 .btn-add:hover{  
     background-color: var.$couleur-card;
 }
 
+// PAGE CONNECTION
 .btn-primary{
     padding: 10px 20px;
     background-color: var.$couleur-card;
@@ -57,8 +66,10 @@
     transition: all 0.3s ease;
     text-decoration: none;
     border: 1px solid var.$couleur-card;
-    display: block;
+    display: inline-block;
     font-size: 1.5rem;
+    margin-left: 30px;
+    margin-bottom: 30px;
 }
 
 .btn-logout{
@@ -69,6 +80,21 @@
     transition: all 0.3s ease;
     text-decoration: none;
     border: 1px solid var.$couleur-card;
-    display: block;
+    display: inline-block;
     font-size: 1.5rem;
+    margin-left: 30px;
 }
+
+// PAGE ARTICLE-COMMENTAIRE
+// .btn-comment{
+//     padding: 10px 20px;
+//     background-color: var.$couleur-card;
+//     color: white;
+//     border-radius: 15px;
+//     transition: all 0.3s ease;
+//     text-decoration: none;
+//     border: 1px solid var.$couleur-card;
+//     display: inline-block;
+//     font-size: 1.5rem;
+//     margin-left: 30px;
+// }

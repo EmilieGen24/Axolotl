@@ -54,15 +54,17 @@
         width: 60%;
         margin: 20px;
         font-size: 1.5rem;
+        margin-bottom: 20px;
     }
 
     .connexion-img{
         width: 30%;
         padding: 20px;
         img{
-            width: 80%;
+            width: 90%;
             margin: 20px;
             border-radius: 15px;
+            margin-top: 25%;
         }
     }
 }
@@ -96,6 +98,7 @@
             border-radius: 15px;
             box-shadow: 2px 2px var.$couleur-card;
             padding: 10px;
+            padding-bottom: 5%;
         }
 
         .card-img{
@@ -111,7 +114,55 @@
         }
     }
 }
+// --------------PAGE ARTICLE-----------------
+.galerie-article{
+    margin-bottom: 10%;
+    margin-top: 10%;
+    border: 2px solid var.$couleur-card;
+    border-radius: 15px;
+    box-shadow: 2px 2px var.$couleur-card;
+    background-color: rgb(179, 211, 218);
 
+        .galerie-article-card{
+            display: flex;
+            justify-content: center;
+            margin: 20px;
+            gap: 50px;
+
+        .galerie-article-content{
+            width: 70%;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+            border: 2px solid var.$couleur-card;
+            border-radius: 15px;
+            box-shadow: 2px 2px var.$couleur-card;
+            padding: 10px;
+            background-color: white;
+            text-align: center;
+            padding-bottom: 3%;
+        }
+
+        .card-img{
+
+            img{
+                width: 80%;
+                height: 50vh;
+                margin: 20px;
+                border-radius: 15px;
+            }
+        }
+        .card-comment{
+            border: 2px solid var.$couleur-card;
+            border-radius: 15px;
+            padding-bottom: 20px;
+            margin: 20px;
+        }
+        .comment{
+            font-size: 1.5rem;
+        }
+    }
+}
 // --------------PAGE GALERIE-----------------
 .galerie{
     margin-bottom: 10%;
@@ -144,6 +195,7 @@
             padding: 10px;
             background-color: white;
             text-align: center;
+            padding-bottom: 3%;
         }
 
         .card-img{
@@ -165,8 +217,23 @@
     justify-content: center;
     gap: 30px;
 }
+// Message d'alerte
+.alert{
+    color: var.$couleur-btn;
+    text-align: center;
+}
 
-
+// --------------PAGE SE CONNECTER-----------------
+.mb-3{
+    text-align: center;
+    margin: 20px;    
+}
+.login{
+    text-align: center;
+}
+.connecting{
+    text-align: center;
+}
 
 
 // --------------PAGE CONTACT-----------------

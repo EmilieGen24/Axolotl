@@ -5,6 +5,9 @@ namespace App\Controller;
 use App\Entity\Commentaire;
 use App\Form\CommentaireType;
 use App\Repository\ArticleRepository;
+use Doctrine\ORM\EntityManagerInterface;
+use App\Repository\CommentaireRepository;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -20,7 +23,7 @@ final class ArticleController extends AbstractController
         ]);
     }
 
-    // pour les commentaires
+    // pour ajouter des commentaires
     #[Route('/article/{id}', name: 'article')]
     public function comment(ArticleRepository $repository, Request $request, EntityManagerInterface $entityManager): Response
     {
@@ -31,12 +34,16 @@ final class ArticleController extends AbstractController
             $entityManager->persist($commentaire);
             $entityManager->flush();
             $this->addFlash('success','Votre commentaire est ajouté avec succès !');
-            return $this->redirectToRoute('accueil');
+            return $this->redirectToRoute('galerie');
         }
-
+        
+        $articles = $repository->findAll();
+        
         return $this->render('article/article.html.twig', [
             'articles' => $articles,
+            
             'commentform' => $form->createView(),
         ]);
     }
+
 }

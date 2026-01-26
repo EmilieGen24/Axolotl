@@ -12,7 +12,7 @@ final class HomeController extends AbstractController
     #[Route('/', name: 'accueil')]
     public function index(ArticleRepository $repository): Response
     {
-        $articles = $repository->findAll();
+        $articles = $repository->findFour();
         return $this->render('home/accueil.html.twig', [
             'articles' => $articles,
         ]);

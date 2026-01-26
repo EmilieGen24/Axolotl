@@ -10,6 +10,11 @@
             <p>Découvrez notre galerie de photos inspirantes où vous pourrez partager vos merveilleux petits "Xolos" qu'ils soient dorés, tachetés, blancs, ou albinos.</p>
             <p>Un espace pour échanger conseils, photos, expériences et poser ses questions.</p>
         </div>
+        <div class="add-article">
+        {% if is_granted('ROLE_USER')%}
+            <a class="btn-add" href={{ path("add_article")}}>Ajouter un article</a>
+        {% endif %}
+        </div>
         {% for message in app.flashes('success')%}  
         <div class="alert alert-success"> 
             {{ message }}
@@ -25,7 +30,7 @@
                 <h4>{{article.nom}}</h4>
                 <p>{{article.couleur}}</p>
                 <p>{{article.description}}</p>
-                {# {% if is_granted('ROLE_USER')%} #}
+                {% if is_granted('ROLE_USER')%}
                 <div class="btn-article">
                     <a class="btn-modif" href={{ path("update_article", {'id' : article.id})}}>Modifier</a>
                     <form action="{{ path("delete", {'id' : article.id}) }}" method="POST" onsubmit="return confirm ('Confirmer la suppression?')">
@@ -34,14 +39,8 @@
                         <input class="btn-sup" id="delete" type="submit" value="Supprimer">
                     </form>
                 </div>
-                {# {% endif %} #}
-            </div>   
-                         
-        </div>
-        <div>
-            {# {% if is_granted('ROLE_USER')%} #}
-                <a class="btn-add" href={{ path("add_article")}}>Ajouter un article</a>
-            {# {% endif %} #}
+                {% endif %}
+            </div>            
         </div>
         {% endfor %}
     </div>
