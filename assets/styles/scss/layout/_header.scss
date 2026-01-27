@@ -8,6 +8,8 @@ header{
     padding-top: 20px;
     padding-bottom: 20px;
     border-bottom: 3px solid var.$couleur-btn;
+    // position: fixed;
+    
 
     // .menu-burger{
         //     display: none;
@@ -23,6 +25,8 @@ header{
         display: flex;
         justify-content: space-between;
         align-items: center; 
+       
+        
 
         ul{
             display: flex;

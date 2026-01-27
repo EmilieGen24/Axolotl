@@ -4,24 +4,28 @@
 
 {% block body %}
 <section class="container">
+    {% for message in app.flashes('success-comment')%}  
+        <div class="alert alert-success"> 
+            {{ message }}
+        </div>
+    {% endfor %}
     <div class="galerie-article">
-        {% for article in articles %}
         <div class="galerie-article-card">
             <div class="galerie-article-content">
                 <div class="card-img">
-                    <img src="{{ asset('/uploads/images/' ~ article.imageName)}}" alt="Image Axolotl">
+                    <img src="{{ asset('/uploads/images/' ~ articles.imageName)}}" alt="Image Axolotl">
                 </div>
-                <h3>{{article.titre}}</h3>
-                <h4>{{article.nom}}</h4>
-                <p>{{article.couleur}}</p>
-                <p>{{article.description}}</p>
+                <h3>{{articles.titre}}</h3>
+                <h4>{{articles.nom}}</h4>
+                <p>{{articles.couleur}}</p>
+                <p>{{articles.description}}</p>
 
                 {% if is_granted('ROLE_USER')%}
                 <div class="btn-article">
-                    <a class="btn-modif" href={{ path("update_article", {'id' : article.id})}}>Modifier</a>
-                        <form action="{{ path("delete", {'id' : article.id}) }}" method="POST" onsubmit="return confirm ('Confirmer la suppression?')">
+                    <a class="btn-modif" href={{ path("update_article", {'id' : articles.id})}}>Modifier</a>
+                        <form action="{{ path("delete", {'id' : articles.id}) }}" method="POST" onsubmit="return confirm ('Confirmer la suppression?')">
                             <input type="hidden" name="_method" value="delete">
-                            <input type="hidden" name="_token" value="{{csrf_token('SUP' ~ article.id)}}">
+                            <input type="hidden" name="_token" value="{{csrf_token('SUP' ~ articles.id)}}">
                             <input class="btn-sup" id="delete" type="submit" value="Supprimer">
                         </form>
                 </div>
@@ -29,20 +33,20 @@
 
                 <div class="card-comment">
                     <h5>Commentaires</h5>
-                    {% for commentaire in article.commentaires %}
+                    {% for commentaire in articles.commentaires %}
                         <div class="comment">
-                            <p>{{ commentaire.user.email }} a commenté votre article :</p>
-                            <p class="comment">{{ commentaire.commentaire }}</p>
+                            <p><strong>{{ commentaire.user.email }}</strong> a commenté votre article :</p>
+                            <p class="comment-text">" {{ commentaire.commentaire }}" </p>
                         </div>
-                        {{form_start(commentform)}}
-                            {{form_widget(commentform)}}
-                            <button class="btn_comment">Ajouter un commentaire</button>
-                        {{form_end(commentform)}}
+                        
                     {% endfor %}
+                    {{form_start(commentform)}}
+                            {{form_widget(commentform)}}
+                            <button class="btn-comment">Ajouter un commentaire</button>
+                        {{form_end(commentform)}}
                 </div>
             </div> 
         </div>
-        {% endfor %}
     </div>
 </section>
 {% endblock %}

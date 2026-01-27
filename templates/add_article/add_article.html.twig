@@ -1,10 +1,12 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello AddArticleController!{% endblock %}
+{% block title %}AddArticle{% endblock %}
 
 {% block body %}
+<div class="container form-add">
     {{form_start(articleform)}}
         {{form_widget(articleform)}}
-            <button>Ajouter l'article</button>
+            <button class="btn-add">Ajouter l'article</button>
     {{form_end(articleform)}}
+</div>
 {% endblock %}

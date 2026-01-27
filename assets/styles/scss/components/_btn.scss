@@ -6,8 +6,9 @@
     @include mix.button;
     transition: all 0.3s ease;
     text-decoration: none;
-    display: block;
+    display: inline-block;
     text-align: center;
+    margin: 0 auto;
 }
 
 .btn-plus:hover{  
@@ -51,7 +52,8 @@
     transition: all 0.3s ease;
     text-decoration: none;
     display: inline-block;
-    margin-left: 20px;
+    margin: 20px;
+    border: 1px solid var.$couleur-btn;
 }
 .btn-add:hover{  
     background-color: var.$couleur-card;
@@ -86,15 +88,28 @@
 }
 
 // PAGE ARTICLE-COMMENTAIRE
-// .btn-comment{
-//     padding: 10px 20px;
-//     background-color: var.$couleur-card;
-//     color: white;
-//     border-radius: 15px;
-//     transition: all 0.3s ease;
-//     text-decoration: none;
-//     border: 1px solid var.$couleur-card;
-//     display: inline-block;
-//     font-size: 1.5rem;
-//     margin-left: 30px;
-// }
+.btn-comment{
+    padding: 10px 20px;
+    background-color: var.$couleur-btn;
+    color: white;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    border: 1px solid var.$couleur-btn;
+    display: inline-block;
+    font-size: 1.5rem;
+    margin-top: 20px;
+}
+
+// PAGE CONTACT
+.btn-send{
+    padding: 10px 20px;
+    background-color: var.$couleur-card;
+    color: white;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    border: 1px solid var.$couleur-card;
+    display: inline-block;
+    font-size: 1.5rem;
+}

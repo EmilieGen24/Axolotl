@@ -43,7 +43,7 @@ class ArticleType extends AbstractType
                     ],
             ])
             ->add('description', TextareaType::class,[
-                'label' => 'Description',
+                'label' => 'Description : ',
             ])
             // ->add('user', EntityType::class, [
             //     'class' => User::class,
@@ -51,6 +51,7 @@ class ArticleType extends AbstractType
             // ])
             ->add('imageFile', FileType::class, [
                 'required' => false,
+                'label' => ' Votre image  : ',
                 'mapped' => true,
                 'constraints' => [
                     new File([

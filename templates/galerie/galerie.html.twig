@@ -4,6 +4,16 @@
 
 {% block body %}
 <section class="container">
+    {% for message in app.flashes('success-modif')%}  
+        <div class="alert alert-success"> 
+            {{ message }}
+        </div>
+    {% endfor %}
+    {% for message in app.flashes('success-add')%}  
+        <div class="alert alert-success"> 
+            {{ message }}
+        </div>
+    {% endfor %}
     <div class="galerie">
         <div class="galerie-text">
             <h2>Notre Galerie</h2>
@@ -15,11 +25,6 @@
             <a class="btn-add" href={{ path("add_article")}}>Ajouter un article</a>
         {% endif %}
         </div>
-        {% for message in app.flashes('success')%}  
-        <div class="alert alert-success"> 
-            {{ message }}
-        </div>
-        {% endfor %}
         {% for article in articles %}
         <div class="galerie-card">
             <div class="galerie-content">

@@ -41,21 +41,19 @@
             <p>Découvrez notre galerie de photos inspirantes où vous pourrez partager vos merveilleux petits "Xolos" qu'ils soient dorés, tachetés, blancs, ou albinos.</p>
             <p>Un espace pour échanger conseils, photos, expériences et poser ses questions.</p>
         </div>
-        {% for article in articles %}
         <div class="card">
+            {% for article in articles %}
             <div class="card-content">
                 <div class="card-img">
                     <img src="{{ asset('/uploads/images/' ~ article.imageName)}}" alt="Image Axolotl">
                 </div>
                 <h3>{{article.titre}}</h3>
-                <h4>Nom : {{article.nom}}</h4>
+                <p>Nom : {{article.nom}}</p>
                 <p>Couleur : {{article.couleur}}</p>
                 <a class="btn-plus" href={{ path("article", {'id' : article.id})}}>Voir plus</a>
-            </div>               
+            </div>
+            {% endfor %}            
         </div>
-        {% endfor %}
     </div>
 </section>
-
-
 {% endblock %}

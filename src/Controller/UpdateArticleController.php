@@ -20,8 +20,8 @@ final class UpdateArticleController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()){
             $entityManager->persist($article);
             $entityManager->flush();
-            $this->addFlash('success','Article modifié avec succès !');
-            return $this->redirectToRoute('accueil');
+            $this->addFlash('success-modif','Article modifié avec succès !');
+            return $this->redirectToRoute('galerie');
         }
 
         return $this->render('update_article/update_article.html.twig', [

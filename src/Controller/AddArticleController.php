@@ -21,8 +21,8 @@ final class AddArticleController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()){
             $entityManager->persist($article);
             $entityManager->flush();
-            $this->addFlash('success','Votre article est ajouté avec succès !');
-            return $this->redirectToRoute('accueil');
+            $this->addFlash('success-add','Votre article est ajouté avec succès !');
+            return $this->redirectToRoute('galerie');
         }
 
         return $this->render('add_article/add_article.html.twig', [
