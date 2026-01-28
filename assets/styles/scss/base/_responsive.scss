@@ -1,0 +1,107 @@
+@use "../abstracts/variables" as var;
+@use "../abstracts/mixins" as mix;
+
+// RESPONSIVE TABLETTE
+@media screen and (max-width: 768px){
+    
+    header nav ul{ 
+        display: none;
+    }
+
+    header .menu-burger{
+        display: flex;
+        justify-content: end;
+            .icon-burger{
+                width: 20%;
+                display: block;       
+            }
+        }
+
+    h1{
+        font-size: 2rem;
+    }
+    .hero .text-accueil{
+        font-size: 2rem;
+        margin-top: 50%;
+    }
+    .btn-inscription{
+        margin-bottom: 0;
+    }
+    .connexion{
+        flex-direction: column;
+        text-align: center; 
+        align-items: center;
+    }
+    .connexion .connexion-text{
+        width: 90%;
+    }
+    .connexion .connexion-img{
+        width: 80%;
+    }
+    .connexion .connexion-img img{
+        height: 70vh;
+        margin-top: 0;
+    }
+
+    .galerie-accueil .card .card-content {
+        width: 70%;
+    }
+// page galerie
+    .galerie .galerie-card .galerie-content{
+        width: 90%;
+    }
+// page connexion
+    .btn-logout {
+    margin-top: 20px;    
+    }
+    .btn-primary{
+    margin-top: 20px;    
+    }
+    .password{
+        margin-top: 20px;
+        margin-bottom: 0;
+    }
+// page contact
+    .contact-area{
+        padding: 30px 70px;
+    }
+    .btn-send{
+        display: block;
+        margin: 0 auto;
+    }
+
+// page article (voir plus)
+    .galerie-article .galerie-article-card .galerie-article-content {
+        width: 90%;
+    }
+   .galerie-article .galerie-article-card .commentaire-area {
+        padding: 30px 70px;
+    }
+}
+
+// RESPONSIVE MOBILE
+
+@media screen and (max-width: 576px){
+    header .header-logo{
+        width: 60%;
+    }
+    header .header-logo img {
+        width: 60%;
+    }
+
+    header .menu-burger{
+        display: flex;
+        justify-content: end;
+            .icon-burger{
+                width: 25%;
+                display: block;       
+            }
+    }
+    // page contact
+    .contact-area{
+        padding: 70px 30px;
+    }
+    
+
+
+}

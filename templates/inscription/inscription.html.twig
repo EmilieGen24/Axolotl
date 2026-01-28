@@ -3,9 +3,11 @@
 {% block title %}Inscription{% endblock %}
 
 {% block body %}
-
+<div class="container form-user">
+    <h2>Inscription</h2>
     {{form_start(userform)}}
         {{form_widget(userform)}}
-        <button>S'inscrire</button>
+        <button class="btn-inscrire">S'inscrire</button>
     {{form_end(userform)}}
+</div>
 {% endblock %}
