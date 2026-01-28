@@ -77,7 +77,13 @@
    .galerie-article .galerie-article-card .commentaire-area {
         padding: 30px 70px;
     }
+
+// page creation article
+    .add-article-area{
+        padding: 30px 70Px;
+    }   
 }
+
 
 // RESPONSIVE MOBILE
 
@@ -85,6 +91,7 @@
     header .header-logo{
         width: 60%;
     }
+
     header .header-logo img {
         width: 60%;
     }
@@ -101,7 +108,21 @@
     .contact-area{
         padding: 70px 30px;
     }
+
+    // page creation article
+    .add-article-area{
+        padding: 70px 30px;
+    }
+    .add-img{
+    padding: 0;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    }
+    h2{
+        font-size: 1.7rem;
+    }
+    .form-add{
+        width: 60%;
+    }
     
-
-
 }

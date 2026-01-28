@@ -182,9 +182,14 @@
     box-shadow: 2px 2px var.$couleur-card;
     background-color: rgb(179, 211, 218);
 
+    .galerie-text h2{
+        text-align: center;
+    }
+
     .galerie-text{
         margin: 20px;
         font-size: 1.5rem;
+        text-align: center;
     }
 
         .galerie-card{
@@ -206,6 +211,8 @@
             background-color: white;
             text-align: center;
             padding-bottom: 3%;
+            padding-left: 20px;
+            padding-right: 20px;
         }
 
         .card-img{
@@ -258,6 +265,7 @@
 .inscription-label{
     margin-top: 20px;
     margin-bottom: 20px;
+    
 }
 
 .form-user h2{
@@ -272,9 +280,47 @@
     border-radius: 15px;
     box-shadow: 2px 2px var.$couleur-card;
     padding: 20px;
-    width: 50%;
-    
+    width: 60%;
 }
+.form-add h2{
+    text-align: center;
+}
+.add-img{
+    padding: 20px;
+    display: none;
+}
+.add-article{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+label[for="article_imageFile"]{
+    background-image: url(../../../img/axo-icon.png);
+    background-position: center;
+    background-size: cover;
+    display: block;
+    text-align: center;
+    width: 50px;
+    height: 10px;
+    padding: 50px;
+    margin: 20px auto;
+    position: relative;
+    &::after{
+        content: "Charger votre image";
+        position: absolute;
+        right: 10px;
+    }
+}
+
+.add-article-area{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 30px 100px;
+    width: 100%;
+    display: block;
+}
+
 // --------------PAGE CONTACT-----------------
 
 .form-contact{

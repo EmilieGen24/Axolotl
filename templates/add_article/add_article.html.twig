@@ -4,9 +4,13 @@
 
 {% block body %}
 <div class="container form-add">
+<h2>Créer votre article</h2>
+
     {{form_start(articleform)}}
+
         {{form_widget(articleform)}}
             <button class="btn-add">Ajouter l'article</button>
+
     {{form_end(articleform)}}
 </div>
 {% endblock %}

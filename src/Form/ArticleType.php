@@ -27,6 +27,9 @@ class ArticleType extends AbstractType
                     new Assert\NotBlank([
                         'message'=>'Le champ titre ne peux pas être vide',]),
                     ],
+                'attr' => [
+                    'class' => 'add-article'
+                ]
             ])
              ->add('nom', TextType::class,[
                 'label'=> 'Le nom de ton axolotl : ',
@@ -34,6 +37,9 @@ class ArticleType extends AbstractType
                     new Assert\NotBlank([
                         'message'=>'Le champ nom ne peux pas être vide',]),
                     ],
+                'attr' => [
+                    'class' => 'add-article'
+                ]
             ])
              ->add('couleur', TextType::class,[
                 'label'=> 'La couleur de ton axolotl : ',
@@ -41,9 +47,15 @@ class ArticleType extends AbstractType
                     new Assert\NotBlank([
                         'message'=>'Le champ couleur ne peux pas être vide',]),
                     ],
+                'attr' => [
+                    'class' => 'add-article'
+                ]
             ])
             ->add('description', TextareaType::class,[
                 'label' => 'Description : ',
+                'attr' => [
+                    'class' => 'add-article-area'
+                ]
             ])
             // ->add('user', EntityType::class, [
             //     'class' => User::class,
@@ -51,8 +63,11 @@ class ArticleType extends AbstractType
             // ])
             ->add('imageFile', FileType::class, [
                 'required' => false,
-                'label' => ' Votre image  : ',
+                'label' => ' ',
                 'mapped' => true,
+                'attr' => [
+                    'class' => 'add-img'
+                ],
                 'constraints' => [
                     new File([
                         'maxSize' => '2M',

@@ -51,9 +51,11 @@
     @include mix.button;
     transition: all 0.3s ease;
     text-decoration: none;
-    display: inline-block;
-    margin: 20px;
+    display: block;
+    justify-self: center;
+    margin: 0 auto;
     border: 1px solid var.$couleur-btn;
+    font-size: 1.2rem;
 }
 .btn-add:hover{  
     background-color: var.$couleur-card;
